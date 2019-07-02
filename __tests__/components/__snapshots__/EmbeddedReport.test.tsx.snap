@@ -1,3 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EmbeddedReport /> renders correctly 1`] = `<div />`;
+exports[`<EmbeddedReport /> renders correctly 1`] = `
+<EmbeddedReport
+  embeddingService={
+    Object {
+      "embed": [Function],
+    }
+  }
+  report={
+    ReportWithEmbedToken {
+      "config": Object {
+        "accessToken": "dumdum",
+        "description": "lollol",
+        "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=undefined&groupId=groupId",
+        "groupId": "groupId",
+        "reportId": "reportId",
+        "tokenType": 1,
+        "type": "report",
+      },
+    }
+  }
+>
+  <div />
+</EmbeddedReport>
+`;
