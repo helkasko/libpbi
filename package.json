@@ -1,0 +1,39 @@
+{
+  "name": "libpbi",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "author": "helkasko <kasko.ohjelmistokehitys@hel.fi> (https://github.com/helkasko)",
+  "private": false,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint-tslint": "tslint --project tsconfig.json -c tslint_prod.yaml \"src/**/*.{ts,tsx}\"",
+    "test": "jest --config jest.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-typescript": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/enzyme": "^3.10.1",
+    "@types/jest": "^24.0.15",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.8.0",
+    "tslint": "^5.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "powerbi-client": "^2.7.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
