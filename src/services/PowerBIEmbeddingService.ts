@@ -6,26 +6,9 @@ import { EmbedConfig } from '../types';
 declare const powerbi: any;
 
 /**
- * A singleton class for retrieving embeddable Power BI reports
+ * For embedding Power BI reports to HTML elements
  */
-class PowerBIEmbeddingService implements IEmbeddingService {
-  private static instance: PowerBIEmbeddingService;
-
-  private constructor() {}
-
-  /**
-   * Returns an instance of this class. Note that if an object of this class has been already
-   * instantiated, it will be returned instead of creating a new one.
-   */
-  static getInstance(): PowerBIEmbeddingService {
-    if (!PowerBIEmbeddingService.instance) {
-      const instance = new PowerBIEmbeddingService();
-      PowerBIEmbeddingService.instance = Object.freeze(instance);
-    }
-
-    return PowerBIEmbeddingService.instance;
-  }
-
+const PowerBIEmbeddingService: IEmbeddingService = {
   /**
    * Retrieves a report using the report configuration passed as argument and embeds it to the
    * element passed as argument. Finally returns the report as well.
@@ -44,6 +27,6 @@ class PowerBIEmbeddingService implements IEmbeddingService {
 
     return report;
   }
-}
+};
 
-export default PowerBIEmbeddingService.getInstance();
+export default PowerBIEmbeddingService;
