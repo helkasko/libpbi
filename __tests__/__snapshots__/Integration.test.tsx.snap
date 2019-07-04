@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Library User can render a report with embed token 1`] = `
+<EmbeddedReport
+  report={
+    ReportWithEmbedToken {
+      "baseUrl": "https://app.powerbi.com/reportEmbed",
+      "embedConfig": Object {
+        "tokenType": 1,
+        "type": "report",
+      },
+      "reportConfig": Object {
+        "accessToken": "token",
+        "description": "description",
+        "groupId": "groupId",
+        "reportId": "reportId",
+      },
+    }
+  }
+>
+  <div />
+</EmbeddedReport>
+`;
+
+exports[`Library User can render a visual with embed token 1`] = `
+<EmbeddedReport
+  report={
+    VisualWithEmbedToken {
+      "baseUrl": "https://app.powerbi.com/reportEmbed",
+      "embedConfig": Object {
+        "tokenType": 1,
+        "type": "visual",
+      },
+      "reportConfig": Object {
+        "accessToken": "token",
+        "description": "description",
+        "groupId": "groupId",
+        "pageName": "pageName",
+        "reportId": "reportId",
+        "visualName": "visualName",
+      },
+    }
+  }
+>
+  <div />
+</EmbeddedReport>
+`;

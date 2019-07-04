@@ -9,14 +9,16 @@ exports[`<EmbeddedReport /> renders correctly 1`] = `
   }
   report={
     ReportWithEmbedToken {
-      "config": Object {
-        "accessToken": "dumdum",
-        "description": "lollol",
-        "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=undefined&groupId=groupId",
-        "groupId": "groupId",
-        "reportId": "reportId",
+      "baseUrl": "https://app.powerbi.com/reportEmbed",
+      "embedConfig": Object {
         "tokenType": 1,
         "type": "report",
+      },
+      "reportConfig": Object {
+        "accessToken": "dumdum",
+        "description": "lollol",
+        "groupId": "groupId",
+        "reportId": "reportId",
       },
     }
   }

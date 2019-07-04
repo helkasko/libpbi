@@ -5,9 +5,11 @@ export enum ReportType {
   REPORT = 'report',
 }
 
-export type AbstractReportConfig = ReportConfig & {
+export type EmbedConfig = {
+  [key: string]: string | ReportType | pbi.models.TokenType | undefined;
   type: ReportType;
   tokenType: pbi.models.TokenType;
+  embedUrl?: string;
 };
 
 export type ReportConfig = {
