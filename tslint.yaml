@@ -1,0 +1,131 @@
+defaultSeverity: "error"
+extends:
+  - "tslint:recommended"
+  - "tslint-react"
+  - "tslint-eslint-rules"
+linterOptions:
+  exclude:
+    - "src/*.d.ts"
+rules:
+  quotemark:
+    - true
+    - "single"
+    - "jsx-double"
+  indent:
+    - true
+    - "spaces"
+    - 2
+  semicolon:
+    - true
+    - "always"
+    - "strict-bound-class-methods"
+  linebreak-style:
+    - true
+    - "LF"
+  whitespace:
+    - true
+    - "check-branch"
+    - "check-operator"
+    - "check-decl"
+    - "check-rest-spread"
+    - "check-separator"
+    - "check-preblock"
+    - "check-type-operator"
+    - "check-type"
+    - "check-typecast"
+  typedef-whitespace:
+    - true
+    -
+      call-signature: "nospace"
+      index-signature: "nospace"
+      parameter: "nospace"
+      property-declaration: "nospace"
+      variable-declaration: "nospace"
+    -
+      call-signature: "onespace"
+      index-signature: "onespace"
+      parameter: "onespace"
+      property-declaration: "onespace"
+      variable-declaration: "onespace"
+  no-trailing-whitespace: true
+  eofline: true
+  triple-equals: true
+  no-console: false
+  no-reference: false
+  curly: true
+  prefer-const: true
+  no-duplicate-imports: true
+  no-duplicate-variable: true
+  no-duplicate-switch-case: true
+  no-parameter-reassignment: true
+  no-unused-expression: true
+  no-irregular-whitespace: true
+  align: true
+  arrow-parens: true
+  object-literal-sort-keys: false
+  member-access:
+    - true
+    - "no-public"
+  member-ordering: false
+  trailing-comma: true
+  no-empty-character-class: true
+  no-magic-numbers:
+    - true
+    - allowed-numbers:
+      - -1
+      - 0
+      - 1
+      - 2
+      - 3
+  interface-over-type-literal: false
+  class-name: true
+  interface-name: false
+  prefer-readonly: true
+  encoding: true
+  arrow-return-shorthand: true
+  array-type:
+    - true
+    - "array"
+  object-curly-spacing:
+    - true
+    - "always"
+  no-constant-condition: true
+  block-spacing:
+    - true
+    - "always"
+  no-duplicate-case: true
+  no-regex-spaces: true
+  ter-indent:
+    - true
+    - 2
+    - SwitchCase: true
+  no-multi-spaces:
+    - true
+  no-extra-semi: true
+  ordered-imports:
+    - true
+    -
+      import-sources-order: "case-insensitive"
+      named-imports-order: "case-insensitive"
+      module-source-path: "basename"
+  ter-arrow-spacing:
+    - true
+  ter-no-sparse-arrays:
+    - true
+  ter-func-call-spacing:
+    - true
+  ter-no-self-compare: true
+  ter-computed-property-spacing:
+    - true
+    - "never"
+  brace-style:
+    - true
+    - "1tbs"
+    - allowSingleLine: true
+  ter-no-mixed-spaces-and-tabs:
+    type: "spaces"
+  space-in-parens:
+    - true
+    - "never"
+  no-var-keyword: true
+  no-object-literal-type-assertion: true
