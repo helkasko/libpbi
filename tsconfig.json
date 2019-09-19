@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "target": "es5",
     "downlevelIteration": true,
     "lib": ["dom", "es7", "es2017.object"],

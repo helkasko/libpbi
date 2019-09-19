@@ -1,11 +1,13 @@
 {
   "name": "libpbi",
   "version": "0.0.1",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "helkasko <kasko.ohjelmistokehitys@hel.fi> (https://github.com/helkasko)",
   "private": false,
   "license": "UNLICENSED",
   "scripts": {
+    "prepublish": "tsc",
     "lint-tslint": "tslint --project tsconfig.json -c tslint_prod.yaml \"src/**/*.{ts,tsx}\"",
     "test": "jest --config jest.config.js"
   },
