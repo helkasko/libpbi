@@ -8,7 +8,6 @@ import EmbeddedReport,
   EmbedTokenReportConfig,
   EmbedTokenVisualConfig,
   IEmbeddingService,
-  PowerBIEmbeddingService,
   ReportWithEmbedToken,
   VisualWithEmbedToken
 } from '../src';

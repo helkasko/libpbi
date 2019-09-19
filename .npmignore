@@ -1,0 +1,5 @@
+README.md
+jest.config.js
+__tests__/
+coverage/
+tslint*
