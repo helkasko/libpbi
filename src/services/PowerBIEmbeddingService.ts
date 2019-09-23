@@ -16,16 +16,16 @@ const PowerBIEmbeddingService: IEmbeddingService = {
    * @param config the embed configuration
    * @returns a powerbi Embed object
    */
-  embed(element: HTMLElement, config: EmbedConfig): pbi.Embed | null {
+  embed(element: HTMLElement, config: EmbedConfig): string[] {
     const errors = pbi.models.validateReportLoad(config);
 
     if (errors) {
-      return null;
+      return errors.map((err) => err.message);
     }
 
-    const report: pbi.Embed = powerbi.embed(element, config);
+    powerbi.embed(element, config);
 
-    return report;
+    return [];
   }
 };
 
