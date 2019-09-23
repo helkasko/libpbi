@@ -18,7 +18,7 @@ exports[`<EmbeddedReport /> renders correctly 1`] = `
         "accessToken": "dumdum",
         "description": "lollol",
         "groupId": "groupId",
-        "reportId": "reportId",
+        "id": "reportId",
       },
     }
   }

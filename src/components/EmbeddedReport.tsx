@@ -32,6 +32,7 @@ export default class EmbeddedReport extends React.PureComponent<ReportProps> {
 
     const { report } = this.props;
     const embeddingService = this.props.embeddingService || PowerBIEmbeddingService;
+
     embeddingService.embed(this.reportRef.current, report.getConfig());
   }
 

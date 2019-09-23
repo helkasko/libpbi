@@ -1,5 +1,10 @@
 README.md
-jest.config.js
+jest*
 __tests__/
 coverage/
 tslint*
+.travis.yml
+assetTransformer.js
+babel*
+enzyme*
+tsconfig.json

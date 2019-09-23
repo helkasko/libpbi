@@ -24,7 +24,7 @@ describe('Library', () => {
     const config: EmbedTokenReportConfig = {
       accessToken: 'token',
       groupId: 'groupId',
-      reportId: 'reportId',
+      id: 'reportId',
       description: 'description'
     };
 
@@ -39,7 +39,7 @@ describe('Library', () => {
     const config: EmbedTokenVisualConfig = {
       accessToken: 'token',
       groupId: 'groupId',
-      reportId: 'reportId',
+      id: 'reportId',
       description: 'description',
       pageName: 'pageName',
       visualName: 'visualName',
