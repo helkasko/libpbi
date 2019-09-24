@@ -14,8 +14,8 @@ import EmbeddedReport,
 import { ReportType } from '../src/types';
 
 class DummyEmbeddingService implements IEmbeddingService {
-  embed = (_: HTMLElement, __: EmbedConfig): pbi.Embed | null => {
-    return null;
+  embed = (_: HTMLElement, __: EmbedConfig): string[] => {
+    return [];
   };
 }
 
@@ -61,6 +61,6 @@ describe('Library', () => {
 
     const dummies: DummyEmbeddingService = new DummyEmbeddingService();
 
-    expect(dummies.embed(dummyElement, dummyConfig)).toBeNull();
+    expect(dummies.embed(dummyElement, dummyConfig)).toEqual([]);
   });
 });

@@ -6,8 +6,8 @@ import ReportWithEmbedToken from '../../src/domain/ReportWithEmbedToken';
 import { EmbedConfig, EmbedTokenReportConfig } from '../../src/types';
 
 const dummyEmbeddingService: IEmbeddingService = {
-  embed: (_: HTMLElement, __: EmbedConfig): null => {
-    return null;
+  embed: (_: HTMLElement, __: EmbedConfig): string[] => {
+    return [];
   }
 };
 

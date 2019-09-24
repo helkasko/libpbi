@@ -1,4 +1,3 @@
-import ErrorList from './ErrorList';
 import IEmbeddingService from '../services/IEmbeddingService';
 import PowerBIEmbeddingService from '../services/PowerBIEmbeddingService';
 import * as React from 'react';
@@ -29,6 +28,8 @@ export default class EmbeddedReport extends React.PureComponent<ReportProps> {
   }
 
   private getEmbeddedReport(): void {
+    this.errors = [];
+
     if (!this.reportRef.current) {
       return;
     }
@@ -39,11 +40,10 @@ export default class EmbeddedReport extends React.PureComponent<ReportProps> {
     this.errors = embeddingService.embed(this.reportRef.current, report.getConfig());
   }
 
-  render() {
-    return (
-      this.errors.length
-        ? <ErrorList errors={this.errors} />
-        : <div ref={this.reportRef} />
-    );
-  }
+  /**
+   * Get errors encountered while embedding
+   */
+  getErrors = (): string[] => this.errors;
+
+  render = () => <div ref={this.reportRef} />;
 }
