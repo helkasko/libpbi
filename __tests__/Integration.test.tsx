@@ -1,6 +1,4 @@
 import { mount } from 'enzyme';
-import * as pbi from 'powerbi-client';
-import { TokenType } from 'powerbi-models';
 import * as React from 'react';
 import EmbeddedReport,
 {
@@ -11,7 +9,6 @@ import EmbeddedReport,
   ReportWithEmbedToken,
   VisualWithEmbedToken
 } from '../src';
-import { ReportType } from '../src/types';
 
 class DummyEmbeddingService implements IEmbeddingService {
   embed = (_: HTMLElement, __: EmbedConfig): void => {

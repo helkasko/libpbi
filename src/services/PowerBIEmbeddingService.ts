@@ -13,7 +13,6 @@ const PowerBIEmbeddingService: IEmbeddingService = {
    * element passed as argument. Finally returns the report as well.
    * @param element the element to embed the report to
    * @param config the embed configuration
-   * @returns a powerbi Embed object
    */
   embed: (element: HTMLElement, config: EmbedConfig): void => {
     powerbi.embed(element, config);
