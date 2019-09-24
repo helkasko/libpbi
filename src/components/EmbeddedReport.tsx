@@ -14,13 +14,11 @@ type ReportProps = {
 export default class EmbeddedReport extends React.PureComponent<ReportProps> {
   reportRef: React.RefObject<HTMLDivElement>;
   embeddingService: IEmbeddingService;
-  errors: string[];
 
   constructor(props: ReportProps) {
     super(props);
 
     this.reportRef = React.createRef();
-    this.errors = [];
   }
 
   componentDidMount() {
@@ -28,8 +26,6 @@ export default class EmbeddedReport extends React.PureComponent<ReportProps> {
   }
 
   private getEmbeddedReport(): void {
-    this.errors = [];
-
     if (!this.reportRef.current) {
       return;
     }
@@ -37,13 +33,8 @@ export default class EmbeddedReport extends React.PureComponent<ReportProps> {
     const { report } = this.props;
     const embeddingService = this.props.embeddingService || PowerBIEmbeddingService;
 
-    this.errors = embeddingService.embed(this.reportRef.current, report.getConfig());
+    embeddingService.embed(this.reportRef.current, report.getConfig());
   }
-
-  /**
-   * Get errors encountered while embedding
-   */
-  getErrors = (): string[] => this.errors;
 
   render = () => <div ref={this.reportRef} />;
 }

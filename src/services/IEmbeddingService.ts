@@ -6,5 +6,5 @@ import { EmbedConfig } from '../types';
  * @returns errors encountered during embedding
  */
 export default interface IEmbeddingService {
-  embed: (element: HTMLElement, config: EmbedConfig) => string[];
+  embed: (element: HTMLElement, config: EmbedConfig) => void;
 }

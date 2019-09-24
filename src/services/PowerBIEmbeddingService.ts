@@ -1,5 +1,4 @@
 import IEmbeddingService from './IEmbeddingService';
-import * as pbi from 'powerbi-client';
 import { EmbedConfig } from '../types';
 
 // powerbi is global
@@ -16,16 +15,8 @@ const PowerBIEmbeddingService: IEmbeddingService = {
    * @param config the embed configuration
    * @returns a powerbi Embed object
    */
-  embed(element: HTMLElement, config: EmbedConfig): string[] {
-    const errors = pbi.models.validateReportLoad(config);
-
-    if (errors) {
-      return errors.map((err) => err.message);
-    }
-
+  embed: (element: HTMLElement, config: EmbedConfig): void => {
     powerbi.embed(element, config);
-
-    return [];
   }
 };
 
