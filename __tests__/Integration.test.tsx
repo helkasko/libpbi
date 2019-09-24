@@ -14,8 +14,8 @@ import EmbeddedReport,
 import { ReportType } from '../src/types';
 
 class DummyEmbeddingService implements IEmbeddingService {
-  embed = (_: HTMLElement, __: EmbedConfig): string[] => {
-    return [];
+  embed = (_: HTMLElement, __: EmbedConfig): void => {
+    return;
   };
 }
 
@@ -61,6 +61,6 @@ describe('Library', () => {
 
     const dummies: DummyEmbeddingService = new DummyEmbeddingService();
 
-    expect(dummies.embed(dummyElement, dummyConfig)).toEqual([]);
+    expect(dummies.embed(dummyElement, dummyConfig)).toBeUndefined();
   });
 });

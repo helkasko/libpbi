@@ -5,7 +5,7 @@ import { EmbedConfig, EmbedTokenReportConfig, ReportType } from '../../src/types
 describe('ReportWithEmbedToken', () => {
   test('the config is set properly', () => {
     const dummyConfig: EmbedTokenReportConfig = {
-      reportId: 'reportId',
+      id: 'reportId',
       groupId: 'groupId',
       accessToken: 'accessToken',
     };
@@ -15,7 +15,7 @@ describe('ReportWithEmbedToken', () => {
     const config: EmbedConfig = embedTokenReport.getConfig();
 
     expect(config.groupId).toEqual(dummyConfig.groupId);
-    expect(config.reportId).toEqual(dummyConfig.reportId);
+    expect(config.id).toEqual(dummyConfig.id);
     expect(config.tokenType).toEqual(pbi.models.TokenType.Embed);
     expect(config.type).toEqual(ReportType.REPORT);
     expect(config.accessToken).toEqual(dummyConfig.accessToken);
