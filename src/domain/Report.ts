@@ -27,8 +27,8 @@ export default class Report {
   }
 
   private getEmbedUrl(): string {
-    const { groupId, reportId } = this.reportConfig;
+    const { groupId, id } = this.reportConfig;
 
-    return `${this.baseUrl}?reportId=${reportId}&groupId=${groupId}`;
+    return `${this.baseUrl}?reportId=${id}&groupId=${groupId}`;
   }
 }

@@ -14,7 +14,7 @@ export type EmbedConfig = {
 
 export type ReportConfig = {
   description?: string;
-  reportId: string;
+  id: string;
   groupId: string;
 };
 

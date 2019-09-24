@@ -5,7 +5,7 @@ import VisualWithEmbedToken from '../../src/domain/VisualWithEmbedToken';
 describe('VisualWithEmbedToken', () => {
   test('the config is set properly', () => {
     const dummyConfig: EmbedTokenVisualConfig = {
-      reportId: 'reportId',
+      id: 'reportId',
       groupId: 'groupId',
       accessToken: 'accessToken',
       pageName: 'pageName',
@@ -17,7 +17,7 @@ describe('VisualWithEmbedToken', () => {
     const config: EmbedConfig = embedTokenVisual.getConfig();
 
     expect(config.groupId).toEqual(dummyConfig.groupId);
-    expect(config.reportId).toEqual(dummyConfig.reportId);
+    expect(config.id).toEqual(dummyConfig.id);
     expect(config.tokenType).toEqual(pbi.models.TokenType.Embed);
     expect(config.type).toEqual(ReportType.VISUAL);
     expect(config.accessToken).toEqual(dummyConfig.accessToken);

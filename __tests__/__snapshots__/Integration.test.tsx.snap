@@ -13,7 +13,7 @@ exports[`Library User can render a report with embed token 1`] = `
         "accessToken": "token",
         "description": "description",
         "groupId": "groupId",
-        "reportId": "reportId",
+        "id": "reportId",
       },
     }
   }
@@ -35,8 +35,8 @@ exports[`Library User can render a visual with embed token 1`] = `
         "accessToken": "token",
         "description": "description",
         "groupId": "groupId",
+        "id": "reportId",
         "pageName": "pageName",
-        "reportId": "reportId",
         "visualName": "visualName",
       },
     }

@@ -3,19 +3,17 @@ import { mount } from 'enzyme';
 import IEmbeddingService from '../../src/services/IEmbeddingService';
 import * as React from 'react';
 import ReportWithEmbedToken from '../../src/domain/ReportWithEmbedToken';
-import { AbstractReportConfig, EmbedTokenReportConfig } from '../../src/domain/types';
+import { EmbedConfig, EmbedTokenReportConfig } from '../../src/types';
 
 const dummyEmbeddingService: IEmbeddingService = {
-  embed: (_: HTMLElement, __: AbstractReportConfig): null => {
-    return null;
-  }
+  embed: (_: HTMLElement, __: EmbedConfig): void => { return; }
 };
 
 const config: EmbedTokenReportConfig = {
   accessToken: 'dumdum',
   description: 'lollol',
   groupId: 'groupId',
-  reportId: 'reportId'
+  id: 'reportId'
 };
 
 const report = new ReportWithEmbedToken(config);
