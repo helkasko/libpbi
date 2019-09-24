@@ -51,16 +51,4 @@ describe('Library', () => {
 
     expect(embeddedReport).toMatchSnapshot();
   });
-
-  test('User can implement his/her own EmbeddingService', () => {
-    const dummyElement: HTMLElement = document.createElement('div');
-    const dummyConfig: EmbedConfig = {
-      tokenType: TokenType.Embed,
-      type: ReportType.REPORT
-    };
-
-    const dummies: DummyEmbeddingService = new DummyEmbeddingService();
-
-    expect(dummies.embed(dummyElement, dummyConfig)).toBeUndefined();
-  });
 });
