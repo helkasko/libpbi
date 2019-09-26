@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "sourceMap": false,
+    "target": "es6",
     "declaration": true,
-    "outDir": "./lib/",
+    "outDir": "./build/",
     "moduleResolution": "node",
     "module": "es6",
     "jsx": "react",
