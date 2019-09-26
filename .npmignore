@@ -8,3 +8,4 @@ assetTransformer.js
 babel*
 enzyme*
 tsconfig.json
+src/

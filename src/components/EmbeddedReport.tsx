@@ -5,6 +5,7 @@ import Report from '../domain/Report';
 
 type ReportProps = {
   report: Report;
+  className?: string;
   embeddingService?: IEmbeddingService;
 };
 
@@ -13,7 +14,6 @@ type ReportProps = {
  */
 export default class EmbeddedReport extends React.PureComponent<ReportProps> {
   reportRef: React.RefObject<HTMLDivElement>;
-  embeddingService: IEmbeddingService;
 
   constructor(props: ReportProps) {
     super(props);
@@ -36,5 +36,5 @@ export default class EmbeddedReport extends React.PureComponent<ReportProps> {
     embeddingService.embed(this.reportRef.current, report.getConfig());
   }
 
-  render = () => <div ref={this.reportRef} />;
+  render = () => <div className={this.props.className} ref={this.reportRef} />;
 }
