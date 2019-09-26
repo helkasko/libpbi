@@ -1,19 +1,12 @@
 {
   "compilerOptions": {
+    "target": "es6",
     "declaration": true,
-    "target": "es5",
-    "downlevelIteration": true,
-    "lib": ["dom", "es7", "es2017.object"],
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
+    "outDir": "./build/",
     "moduleResolution": "node",
     "module": "es6",
     "jsx": "react",
-    "esModuleInterop": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "strict": true
   },
   "include": [
     "src/**/*"
